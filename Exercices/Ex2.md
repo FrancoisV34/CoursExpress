@@ -1,7 +1,7 @@
-# Exercice 1
+# Exercice 2
 
 Réaliser une API Express de gestion de livres.
-peuvent ajouter, mettre à jour, récupérer et supprimer des livres à l'aide des méthodes HTTP GET, POST, PUT et DELETE.
+Les utilisateurs peuvent ajouter, mettre à jour, récupérer et supprimer des livres à l'aide des méthodes HTTP GET, POST, PUT et DELETE.
 
 Aucun base de données n'est requise pour le moment.
 
