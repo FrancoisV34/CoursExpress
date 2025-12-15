@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titre": "Le Petit Prince",
+    "auteur": "Antoine de Saint-Exupéry",
+    "annee_publication": 1943,
+    "genre": "Conte philosophique",
+    "disponible": true
+  },
+  {
+    "id": 2,
+    "titre": "1984",
+    "auteur": "George Orwell",
+    "annee_publication": 1949,
+    "genre": "Dystopie",
+    "disponible": false
+  },
+  {
+    "id": 3,
+    "titre": "To Kill a Mockingbird",
+    "auteur": "Harper Lee",
+    "annee_publication": 1960,
+    "genre": "Roman",
+    "disponible": true
+  }
+]

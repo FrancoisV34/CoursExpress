@@ -17,3 +17,6 @@ Exemple de JSON de livre :
     "disponible": true
   },
 ```
+
+Rajouter une route pour GET /available (disponible : true)
+Et 1 avec GET /genre pour récupérer les livres du genre policier (/genre?query=policier)
