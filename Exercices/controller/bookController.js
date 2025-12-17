@@ -89,12 +89,13 @@ const genreBooks = async (req, res) => {
 // Route to add a new book
 const addBook = async (req, res) => {
   try {
-    const { newBook } = req.body;
-    const addedBook = await serviceBook.addBook(newBook);
+    const newBook = await serviceBook.addBook(req.body);
+    console.log('newBook dans le controller', newBook);
+
     res.status(201).json({
       success: true,
       message: 'Livre ajouté avec succès',
-      data: addedBook,
+      data: newBook,
     });
   } catch (error) {
     res.status(500).json({
@@ -104,14 +105,31 @@ const addBook = async (req, res) => {
 };
 
 // Route to update a book by ID
-const updateBook = (req, res) => {
-  const id = parseInt(req.params.id, 10);
-  const updatedBookData = req.body;
-  const updatedBook = serviceBook.updateBook(id, updatedBookData);
-  if (updatedBook) {
-    res.json(updatedBook);
-  } else {
-    res.status(404).send('Book not found');
+// const updateBook = (req, res) => {
+//   const id = parseInt(req.params.id, 10);
+//   const updatedBookData = req.body;
+//   const updatedBook = serviceBook.updateBook(id, updatedBookData);
+//   if (updatedBook) {
+//     res.json(updatedBook);
+//   } else {
+//     res.status(404).send('Book not found');
+//   }
+// };
+
+const updateBook = async (req, res) => {
+  try {
+    const updatedBook = await serviceBook.updateBook(req.params.id, req.body);
+    res.status(200).json({
+      success: true,
+      message: 'Livre mis à jour avec succès',
+      data: updatedBook,
+    });
+  } catch (error) {
+    const statusCode = error.message.includes('non trouvé') ? 404 : 400;
+    res.status(statusCode).json({
+      success: false,
+      message: error.message,
+    });
   }
 };
 
