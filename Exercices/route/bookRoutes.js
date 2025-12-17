@@ -12,7 +12,7 @@ router.get('/books/:id', bookController.getBookById);
 router.get('/available', bookController.disponibleBooks);
 
 //route to get books genre policier
-router.get('/genre', bookController.genreBooks); // GET /genre
+router.get('/genre', bookController.genreBooks); // GET /genre?genre=ta-recherche-ici (exemple: /genre?genre=policier)
 
 // Route to add a new book
 router.post('/books', bookController.addBook);

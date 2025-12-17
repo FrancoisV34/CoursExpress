@@ -25,15 +25,21 @@ let books = [
   },
 ];
 
+const Books = require('../model/bookModel');
 // Function to get all books
-function getAllBooks() {
-  return books;
-}
+const getAllBooks = async () => {
+  return await Books.findAll();
+};
+
+// Function to get a book by ID
+const getBookById = async (id) => {
+  return await Books.findByPk(id);
+};
 
 //rechercher les livres disponibles
-function getAvailableBooks() {
-  return books.filter((book) => book.disponible);
-}
+const getAvailableBooks = async () => {
+  return await Books.findAll({ where: { disponible: true } });
+};
 
 function getGenreBooks(genre) {
   console.log('dans le service', genre);
@@ -45,11 +51,6 @@ function getGenreBooks(genre) {
   );
 }
 console.log('export de genreBooks', getGenreBooks('policier'));
-
-// Function to get a book by ID
-function getBookById(id) {
-  return books.find((book) => book.id === id);
-}
 
 // Function to add a new book
 function addBook(newBook) {
