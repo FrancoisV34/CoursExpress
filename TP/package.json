@@ -1,5 +1,5 @@
 {
-  "name": "exercices",
+  "name": "tp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,13 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "express-validator": "^7.3.1",
+    "mongoose": "^9.0.2",
+    "mongosh": "^2.5.10",
+    "nodemon": "^3.1.11",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
   }
