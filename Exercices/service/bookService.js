@@ -22,7 +22,7 @@ const addBook = async (bookData) => {
   if (!titre || titre.trim() === '') {
     throw new Error('Le nom du livre est requis');
   }
-
+  console.log('titre', titre);
   const newBook = await Books.create({
     titre: titre.trim(),
     auteur: auteur.trim(),
