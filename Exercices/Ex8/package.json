@@ -1,0 +1,19 @@
+{
+  "name": "ex8-tests",
+  "version": "1.0.0",
+  "description": "Tests unitaires pour l'exercice 8",
+  "main": "utils.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "tests",
+    "unitaires",
+    "jest"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
